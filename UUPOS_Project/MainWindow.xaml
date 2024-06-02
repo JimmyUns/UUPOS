@@ -45,7 +45,7 @@
                     </Grid.RowDefinitions>
 
                     <Grid Grid.Row="0">
-                        <Label FontSize="17" Content="Categories" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="17,0,0,0"/>
+                        <Label FontSize="20" Content="Categories" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="17,0,0,0"/>
                         <Button x:Name="categories_additem_Button" Background="#f05050" Foreground="White" FontSize="20" Content="+" Margin="221,22,10,21" BorderThickness="0" Click="categories_additem_Button_Click">
                             <Button.Resources>
                                 <Style TargetType="Border">
@@ -69,6 +69,7 @@
                                 <Setter Property="Height" Value="72" />
                                 <Setter Property="BorderBrush" Value="LightGray" />
                                 <Setter Property="BorderThickness" Value="0,0,0,1" />
+                                <Setter Property="FontSize" Value="20" />
                             </Style>
                         </ListView.ItemContainerStyle>
 
@@ -114,12 +115,12 @@
                 </Border.Effect>
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="14*"/>
                         <RowDefinition Height="139*"/>
-                        <RowDefinition Height="64*"/>
+                        <RowDefinition Height="50*"/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock Text="Checkout" FontWeight="Bold" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center" Height="16" Width="52"/>
+                    <TextBlock Text="Checkout" FontWeight="Bold" FontSize="25" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="166"/>
 
                     <ListView Grid.Row="1" Name="BuyingList" FontSize="20" SelectionMode="Single" d:ItemsSource="{d:SampleData ItemCount=0}">
                         <ListView.ItemContainerStyle>
@@ -140,9 +141,9 @@
 
                     <Grid Grid.Row="3">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="90"/>
-                            <RowDefinition Height="90"/>
-                            <RowDefinition Height="90"/>
+                            <RowDefinition Height="35*"/>
+                            <RowDefinition Height="50*"/>
+                            <RowDefinition Height="50*"/>
                         </Grid.RowDefinitions>
                         <Border Background="#f8f8f8" Grid.Row="0" BorderThickness="0.3" BorderBrush="Black"/>
                         <Grid VerticalAlignment="Center" Height="90" Grid.Row="0">

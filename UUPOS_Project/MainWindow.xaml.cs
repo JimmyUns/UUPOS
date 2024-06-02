@@ -111,13 +111,12 @@ namespace UUPOS_Project
             {
                 if (item is Product product)
                 {
-                    total += Convert.ToDouble(product.Price);
+                    total += Convert.ToDouble(product.Price) * product.Quantity;
                 }
             }
             buyinglistTotal.Text = "$" + total.ToString() + "  ";
         }
 
-        private int buyinglist_editingIndex = -1;
         private void buyinglist_increaseamount_Button_Click(object sender, RoutedEventArgs e)
         {
             if (BuyingList.SelectedItem != null)
@@ -127,6 +126,7 @@ namespace UUPOS_Project
                     if (selectedProduct.Quantity < 99) selectedProduct.Quantity++;
                     else selectedProduct.Quantity = 99;
                     BuyingList.Items.Refresh();
+                    UpdateBuyingList();
                 }
             }
         }
@@ -140,6 +140,7 @@ namespace UUPOS_Project
                     if(selectedProduct.Quantity > 0) selectedProduct.Quantity--;
                     else selectedProduct.Quantity = 0;
                     BuyingList.Items.Refresh();
+                    UpdateBuyingList();
                 }
             }
         }
